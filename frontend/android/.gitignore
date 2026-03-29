@@ -1,4 +1,24 @@
+# Gradle
 gradle.properties
 local.properties
 .gradle/
 build/
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*~
+
+# Build outputs
+*.apk
+*.aar
+*.aab
+*.jar
+
+# IDE
+.vscode/
+.DS_Store
+
