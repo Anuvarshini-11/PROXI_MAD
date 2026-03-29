@@ -3,18 +3,18 @@ APP_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GRADLE_USER_HOME="${GRADLE_USER_HOME:-$HOME/.gradle}"
 
 # Find gradle distribution
-GRADLE_HOME=$(find $GRADLE_USER_HOME/wrapper/dists -type d -name "gradle-8.1.1-bin" 2>/dev/null | head -1)
+GRADLE_HOME=$(find $GRADLE_USER_HOME/wrapper/dists -type d -name "gradle-8.10-bin" 2>/dev/null | head -1)
 if [ -z "$GRADLE_HOME" ]; then
-    GRADLE_HOME=$(find /home -type d -name "gradle-8.1.1-bin" 2>/dev/null | head -1)
+    GRADLE_HOME=$(find /home -type d -name "gradle-8.10-bin" 2>/dev/null | head -1)
 fi
 
 if [ -z "$GRADLE_HOME" ]; then
     echo "Gradle not found, downloading..."
     mkdir -p "$GRADLE_USER_HOME/wrapper/dists"
     cd "$GRADLE_USER_HOME/wrapper/dists"
-    wget https://services.gradle.org/distributions/gradle-8.1.1-bin.zip 2>/dev/null || curl -o gradle-8.1.1-bin.zip https://services.gradle.org/distributions/gradle-8.1.1-bin.zip
-    unzip -q gradle-8.1.1-bin.zip
-    GRADLE_HOME="$GRADLE_USER_HOME/wrapper/dists/gradle-8.1.1"
+    wget https://services.gradle.org/distributions/gradle-8.10-bin.zip 2>/dev/null || curl -o gradle-8.10-bin.zip https://services.gradle.org/distributions/gradle-8.10-bin.zip
+    unzip -q gradle-8.10-bin.zip
+    GRADLE_HOME="$GRADLE_USER_HOME/wrapper/dists/gradle-8.10"
     cd "$APP_PATH"
 fi
 
