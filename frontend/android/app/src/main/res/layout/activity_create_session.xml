@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Session"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sessionNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Session Name"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_bg" />
+
+            <EditText
+                android:id="@+id/subjectInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Subject"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_bg" />
+
+            <EditText
+                android:id="@+id/locationInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Location"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_bg" />
+
+            <EditText
+                android:id="@+id/maxParticipantsInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Max Participants"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edittext_bg" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Create Session"
+        android:textSize="16sp"
+        android:background="@color/primaryColor"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Back"
+        android:textSize="16sp"
+        android:background="@color/buttonColor"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
